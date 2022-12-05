@@ -1,0 +1,156 @@
+:root {
+    --text-color: #f0f4f5;
+    --background-color : #263343;
+    --accent-color : #d49466;
+
+}
+body{
+    margin: 0;
+    font-family: 'Source Sans Pro';
+    background-color: #828a8d;
+}
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #263343;
+    padding: 8px 12px;
+}
+
+.navbar_logo{
+    font-size: 24px;
+    color: white;
+}
+
+.navbar_logo i {
+    color: #d49466;
+}
+
+.navbar_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0px;
+}
+
+.navbar_menu li {
+    padding: 8px 12px;
+}
+
+.navbar_menu li:hover {
+    background-color: #d49446;
+    border-radius: 4px;
+}
+.navbar_icons {
+    list-style: none;
+    color: white;
+    display: flex;
+    padding-left: 0;
+}
+
+.navbar_icons li {
+    padding: 8px 12px;
+}
+
+.navbar_tooglebtn {
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: #d49466;
+}
+
+/* aside */
+
+.side_part {
+    position: absolute;
+    right: 0;
+}
+
+.side_bar {
+    position: relative;
+    width: 260px;
+    height: 550px;
+    margin: 0 auto;
+    background-color: #263343;
+}
+
+.side_select {
+    background-color: #263343;
+    height: 50px;
+    margin: 0;
+    display: flex;
+    list-style: none;
+    padding-left: 0px;
+    align-items: center;
+}
+
+.side_select li {
+    width: 130px;
+    height: 50px;
+    border: 1px solid #2d2d2d;
+    color: #f0f4f5;
+}
+
+.side_shortcut {
+    background-color: #263343;
+    margin: 0;
+    height: 500px;
+}
+
+.side_shortcut li {
+    display: flex;
+    justify-content:left;
+    height: 100px;
+    list-style: none;
+    color: #f0f4f5;
+}
+
+/* article */
+
+article div {
+    width: 100%;
+    background-color: black;
+}
+
+article div h1 {
+    margin: 0;
+    color: #f0f4f5;
+}
+
+@media screen and (max-width: 768px){
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        padding : 8px 24px;
+    }
+
+    .navbar_menu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar_menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar_icons{
+        display: none;
+        justify-content: center;
+        width : 100%;
+    }
+    
+    .navbar_tooglebtn {
+        display: block;
+    }
+    .navbar_menu.active,
+    .navbar_icons.active {
+        display: flex;
+    }
+}
