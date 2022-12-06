@@ -2,7 +2,7 @@
 // 명확한 조건의 코딩을 하기위해 선언한다.
 'use strict'; 
 
-// 2. Variable
+// 2. Variable (변수)
 // let (ES6)
 {
     let name = 'Danny';
