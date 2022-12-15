@@ -1,13 +1,16 @@
 import java.util.Scanner;
 
+//가격 확인 버튼을 누르면 실시간으로 가격변동이 보일수있게 만들기
 public class user {
     public static void main(String[] args) {
+        TreadEx treadEx = new TreadEx();
+        treadEx.threadStart();
         int money = 0;
-        int nowBitcoinPrice = 2300000;
+        int nowBitcoinPrice = 23000000;
         Scanner scanner = new Scanner(System.in);
 
         out: while (true) {
-            System.out.println("1.입금  2.출금  3.구매  4.자산");
+            System.out.println("1.입금  2.출금  3.구매  4.자산 5.가격");
             int selectMenu = scanner.nextInt();
             switch (selectMenu) {
                 case 1:
@@ -33,6 +36,10 @@ public class user {
                 case 4:
                     System.out.println("1.수익률 2.예수금 3.총자산");
                     System.out.println("잔액 : " + money);
+                    System.out.println();
+                    break;
+                case 5:
+
                     break;
             }
         }
