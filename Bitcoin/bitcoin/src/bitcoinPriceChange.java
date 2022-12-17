@@ -11,7 +11,7 @@ public class bitcoinPriceChange {
         int cnt = 0;
 
         while (true) {
-            int randomNum = new Random().nextInt(600000) - 310000;
+            int randomNum = new Random().nextInt(600000) - 230000;
             bitcoinPrice += randomNum;
             int avn = -(todayStartPrice - bitcoinPrice);
             float avg = ((float) avn / todayStartPrice) * 100;
