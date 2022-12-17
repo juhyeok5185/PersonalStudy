@@ -8,9 +8,10 @@ public class bitcoinPriceChange {
         int wallet = 0;
         int todayStartPrice = 20000000;
         int bitcoinPrice = 20000000;
+        int cnt = 0;
 
         while (true) {
-            int randomNum = new Random().nextInt(600000) - 290000;
+            int randomNum = new Random().nextInt(600000) - 310000;
             bitcoinPrice += randomNum;
             int avn = -(todayStartPrice - bitcoinPrice);
             float avg = ((float) avn / todayStartPrice) * 100;
