@@ -15,6 +15,7 @@ public class util {
     static boolean loginCk = false;
     static boolean managerMode = false;
     static int menuNum = 0;
+    static int userSeq = 0;
 
     public static void Start() {
         Scanner scanner = new Scanner(System.in);
@@ -47,14 +48,20 @@ public class util {
                     break;
                 case 3:
                     if (loginCk) {
-                        System.out.println("잔액");
+                        System.out.println("잔액 : " + u.money);
                     } else if (managerMode) {
                         managerMode = false;
                     }
                     break;
                 case 4:
+                    int deposit = InputInt("입금");
+                    userArr[userSeq].money += deposit;
+                    System.out.println("입금완료");
                     break;
                 case 5:
+                    int withdrwal = InputInt("출금");
+                    userArr[userSeq].money += withdrwal;
+                    System.out.println("출금완료");
                     break;
                 case 6:
                     for (int i = 0; i < userCardCnt; i++) {
@@ -120,6 +127,12 @@ public class util {
         return scanner.next();
     }
 
+    public static int InputInt(String a) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(a);
+        return scanner.nextInt();
+    }
+
     public static boolean ManagerModeLogin(String loginId, String loginPw) {
         if (loginId.equals("test") && loginPw.equals("1234")) {
             System.out.println("관리자로그인");
@@ -132,6 +145,7 @@ public class util {
         for (int i = 0; i < cnt; i++) {
             if (loginId.equals(userArr[i].id) && loginPw.equals(userArr[i].pw)) {
                 System.out.println("로그인완료");
+                userSeq = i;
                 loginCk = true;
                 break;
             } else {
@@ -160,4 +174,5 @@ public class util {
         cnt++;
         return cnt;
     }
+
 }
