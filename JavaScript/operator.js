@@ -1,8 +1,8 @@
 'use strict';
 
 // 1. String 연산
-console.log("my" + "cat");
-console.log("1" + 2);
+console.log("my" + "cat"); //mycat
+console.log("1" + 2); //12
 
 // 2. 숫자 연산자
 console.log(1 + 1);
@@ -80,7 +80,7 @@ while (i > 0){
 }
 
 // 12. do while
-do{console.log("DO WIHER")
+do{console.log("DO WHILE")
 i--;
 } while(i >0);
 
