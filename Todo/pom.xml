@@ -3,8 +3,7 @@
   <groupId>Todo</groupId>
   <artifactId>Todo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
-  <dependencies>
+  <packaging>war</packaging><dependencies>
 		<!-- https://mvnrepository.com/artifact/taglibs/standard -->
 		<dependency>
 			<groupId>taglibs</groupId>

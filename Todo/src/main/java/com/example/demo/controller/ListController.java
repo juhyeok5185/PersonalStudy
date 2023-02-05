@@ -1,4 +1,4 @@
-package com.example.demo.todo.controller;
+package com.example.demo.controller;
 
 import java.io.IOException;
 import java.util.List;
@@ -10,14 +10,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.example.demo.todo.entity.Todo;
-import com.example.demo.todo.service.TodoService;
+import com.example.demo.dao.TodoDao;
+import com.example.demo.entity.Todo;
 
 @WebServlet("/list")
 public class ListController extends HttpServlet {
-	@Override 
+	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		List<Todo> list = TodoService.getInstance().listAll();
+		TodoDao todoDao = TodoDao.getInstance();
+		List<Todo> list = todoDao.getList();
 		req.setAttribute("list", list);
 		RequestDispatcher rd = req.getRequestDispatcher("/list.jsp");
 		rd.forward(req, resp);

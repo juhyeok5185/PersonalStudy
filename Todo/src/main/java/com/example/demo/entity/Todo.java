@@ -1,4 +1,4 @@
-package com.example.demo.todo.entity;
+package com.example.demo.entity;
 
 import java.time.LocalDate;
 
@@ -19,16 +19,11 @@ public class Todo {
 	private String content;
 	private LocalDate writeday;
 	private LocalDate deadline;
-	private boolean isFinish;
-	
-	public void toggleFinish() {
-		this.isFinish = !this.isFinish;
-	}
+	boolean isFinish;
 	
 	public void init(int no) {
 		this.no = no;
 		this.writeday = LocalDate.now();
 		this.isFinish = false;
 	}
-	
 }

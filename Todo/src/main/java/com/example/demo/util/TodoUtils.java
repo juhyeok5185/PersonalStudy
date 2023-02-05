@@ -1,5 +1,6 @@
-package com.example.demo.todo.util;
-import java.time.LocalDate;
+package com.example.demo.util;
+
+import java.time.*;
 
 public class TodoUtils {
 	public static LocalDate getLocalDate(String date) {
