@@ -1,0 +1,54 @@
+
+#content{
+  height: 910px;
+  width: 66%;
+  border-right: 1px solid #212529;
+  float: left;
+}
+
+#side-bar{
+  height: 910px;
+  width: 33%;
+  float: right;
+}
+
+#comment {
+  resize: none;
+  background-color: #424750;
+  width: 300px;
+  min-height: 400px;
+  margin: 0px auto;
+  margin-top: 80px;
+  color: white;
+}
+
+#input-date {
+  margin-top: 20px;
+  margin-left: 65px;
+  width: 160px;
+  border-radius: 7px;
+  background-color: #424750;
+  color: rgb(132, 131, 138);
+}
+
+#btn-submit {
+  width: 175px;
+  margin-left: 160px;
+}
+
+section{
+  height: 910px;
+  overflow: hidden;
+  background-color:#282c34;
+  color: white;
+}
+
+.card-header , .card-body {
+  background-color: #424750;
+  color:  white;
+}
+
+#btn-background {
+  
+  color:  white;
+}
