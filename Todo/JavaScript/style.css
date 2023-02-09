@@ -23,8 +23,7 @@
 }
 
 #input-date {
-  margin-top: 20px;
-  margin-left: 65px;
+  margin: 20px auto;
   width: 160px;
   border-radius: 7px;
   background-color: #424750;
@@ -32,8 +31,11 @@
 }
 
 #btn-submit {
-  width: 175px;
-  margin-left: 160px;
+  margin-left: 60px;
+}
+
+#btn_c {
+  text-align: center;
 }
 
 section{
@@ -49,6 +51,16 @@ section{
 }
 
 #btn-background {
-  
   color:  white;
+}
+
+#board {
+  margin-top: 80px;
+}
+
+#textdeco {
+  text-decoration: none;
+  background-color: #282c34;
+  color: white;
+  padding: 0px;
 }
